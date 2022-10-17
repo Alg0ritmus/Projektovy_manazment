@@ -15,10 +15,10 @@ password: admin
 
 Vykonané kroky:
 
-1) vytvorenie backend & frontend zlozky
-1.1) vytvorenie virtual env
-1.2) pip install potrebne moduly (django, drf, drf-simplejwt... -> pip freeze)
-2) vytvorenie django projektu (django-admin startproject backend)
+1) vytvorenie backend & frontend zlozky  
+1.1) vytvorenie virtual env  
+1.2) pip install potrebne moduly (django, drf, drf-simplejwt... -> pip freeze)  
+2) vytvorenie django projektu (django-admin startproject backend)  
 3) vytvorenie django appky (py manage.py startapp base)
 4) pridanie "base "appky do INSTALLED_APPS v settings.py
 5) vytvorenie urls.py v "base" 
