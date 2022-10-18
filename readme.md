@@ -29,4 +29,7 @@ Vykonané kroky:
 Uzitocne linky:  
 https://jwt.io/
 
+Ako funguje JWT?  
+<img src=https://developer.okta.com/assets-jekyll/blog/node-token-auth/token-authentication-flow-69804c12334715c597128cd9273bca5e32ed516b62987902310efc54d1840a40.png>
+
 
