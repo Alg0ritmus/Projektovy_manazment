@@ -26,10 +26,11 @@ Vykonané kroky:
 7) pridanie a uprava JWT settings v settings.py
 8) pridanie CORS origin all (settings.py)
 
-Uzitocne linky:  
+# Uzitocne linky:  
 https://jwt.io/
+https://excalidraw.com/  
 
-Ako funguje JWT?  
+# Ako funguje JWT?  
 <img src=https://developer.okta.com/assets-jekyll/blog/node-token-auth/token-authentication-flow-69804c12334715c597128cd9273bca5e32ed516b62987902310efc54d1840a40.png>
 
 
