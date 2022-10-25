@@ -1,7 +1,13 @@
 ## Social Network - projektový manažment 
 
 # Autori:
+[ks588hn](https://github.com/ks588hn)  
+[ALESO8](https://github.com/ALESO8)  
+[IvanGadus](https://github.com/IvanGadus)  
+  
+
 ...
+
 
 
 # Backend - key info
