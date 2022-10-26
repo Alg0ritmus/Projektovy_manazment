@@ -22,6 +22,13 @@ urlpatterns = [
     path('firebase-reg/',views.fb_registration_view,name="fb_registration_view"),
     path('pure-firebase-reg/',views.pure_fb_registration_view,name="pure_fb_registration_view"),
 
+
+
+    # realne URL
+
+    path('registration/',views.register_user,name="registration"),
+    path('login/',views.login_user,name="login"),
+
     
     #path('firebase-login/',views.fb_login_view,name="fb_login_view"),
     #path('firebase-logout/',views.fb_logout_view,name="fb_logout_view"),

@@ -1,3 +1,4 @@
+from enum import unique
 from django.db import models
 
 from django.contrib.auth.models import User
@@ -6,11 +7,17 @@ from django.contrib.auth.models import User
 # available model fields:
 # https://docs.djangoproject.com/en/4.1/ref/models/fields/
 
+
+# Native django User model -> set email as unique field:
+# https://stackoverflow.com/a/64075027
+User._meta.get_field('email')._unique = True
+
+
 class User_profile(models.Model):
     # bind Django User model with our custom User_profile
     # default django (obsahuje: username,first/last_name,email,password, groups, user_permisstions...)
     # https://docs.djangoproject.com/en/4.1/ref/contrib/auth/
-    user = models.OneToOneField(User,on_delete=models.CASCADE,primary_key=True)
+    user = models.OneToOneField(User,on_delete=models.CASCADE)
     
     # https://docs.djangoproject.com/en/4.1/ref/models/fields/#datetimefield
     # DateTimeField -> represent Python datetime.datetime
@@ -42,9 +49,8 @@ class User_post(models.Model):
     # 1:M, if user is deleted, posts are also deleted (CASCADE)
     # 1 User can have multiple posts
     profile_id = models.ForeignKey(User_profile,on_delete=models.CASCADE)
-    created_date = models.DateField(auto_now_add=True)   
-    # ADDED P.Z.:
-    text = models.TextField(null=True, blank=False)
+    created_date = models.DateField(auto_now_add=True)  
+    shared_counter = models.IntegerField(default=0) 
 
     def __str__(self):
         return "User_post ID: %s | User_post text : %s..." % (self.pk,self.text[::20]) 
