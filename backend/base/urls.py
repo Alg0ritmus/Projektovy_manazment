@@ -29,7 +29,9 @@ urlpatterns = [
     path('registration/',views.register_user,name="registration"),
     path('login/',views.login_user,name="login"),
 
-    
+    # testing url
+    path('vtt/',views.verify_token_test,name="verify_token_test"),
+
     #path('firebase-login/',views.fb_login_view,name="fb_login_view"),
     #path('firebase-logout/',views.fb_logout_view,name="fb_logout_view"),
 

@@ -17,6 +17,10 @@ import uuid
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
+
+# decorators
+from .firebaseTokenSerializator import firebase_token_verification
+
 # Create your views here.
 @api_view(['GET','POST'])
 def home(request):
@@ -282,3 +286,13 @@ def login_user(request):
 # Odhlasenie -> na frontende -> v backende zablokovat token ???
 
 # Vymazat ucet
+
+
+########################################################################
+################################## API #################################
+########################################################################
+
+@firebase_token_verification
+@api_view(['GET'])
+def verify_token_test(request):
+    return Response({"This route is verified!:"})
