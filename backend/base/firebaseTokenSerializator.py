@@ -42,7 +42,10 @@ def firebase_token_verification(view_func):
         isIdTokenVerified = False
         if User_profile.objects.filter(uuid=decoded_token["users"][0]["localId"]).exists():
             isIdTokenVerified = True
-        assert(isIdTokenVerified)
+
+        if isIdTokenVerified == False:
+            return Response({"Failure":"Invalid token or token has expired!"})
+
         return view_func(request, *args, **kwargs)
 
     return func_to_return

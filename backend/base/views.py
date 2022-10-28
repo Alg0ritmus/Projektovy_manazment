@@ -9,6 +9,8 @@ from .models import User_profile
 
 import json
 
+
+from django.views.decorators.csrf import csrf_exempt
 import uuid
 
 
@@ -232,8 +234,8 @@ def register_user(request):
         
         firebase_user=authe.create_user_with_email_and_password(user_email,user_password)
     except:
-        message="Invalid Credentials!!Please ChecK your Data"
-        print({"message":message})
+        message="Invalid Credentials!"
+        print({"FirebaseError":message})
     print(firebase_user)
     
     # If New User is successfully added to DB & Firebase auth system, 
@@ -276,7 +278,7 @@ def login_user(request):
         # if there is no error then signin the user with given email and password
         user_tokens=authe.sign_in_with_email_and_password(user_email,user_password)
     except Exception as e:
-        message="Invalid Credentials!!Please ChecK your Data"
+        message="Invalid Credentials!"
         print(e)
         return Response({"message":message})
     
@@ -295,4 +297,26 @@ def login_user(request):
 @firebase_token_verification
 @api_view(['GET'])
 def verify_token_test(request):
-    return Response({"This route is verified!:"})
+    if request.method == 'POST':
+        raw_data = request.body.decode()
+        
+        json_data = json.loads(raw_data)
+    
+        passed_data = json_data["passed_data"]
+
+        return Response({"Success":"This route is verified!","Your Data":passed_data})
+    return Response({"Success":"This route is verified!"})
+
+
+@csrf_exempt
+@firebase_token_verification
+@api_view(['POST'])
+def verify_token_test(request):
+    
+    raw_data = request.body.decode()
+    
+    json_data = json.loads(raw_data)
+
+    passed_data = json_data["passed_data"]
+
+    return Response({"Success":"This route is verified!","Your Data":passed_data})
