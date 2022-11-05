@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-)*z%te^jkb&8s$so%yop!80@q)#4(yamt*6x+ph9(lxr(f3(1!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','https://tukebooktest.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1','tukebook.herokuapp.com']
 
 
 # Application definition
