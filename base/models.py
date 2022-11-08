@@ -36,6 +36,21 @@ class User_profile(models.Model):
     # UUID due to match w firebase JWT DB
     uuid = models.TextField(max_length=50,blank=True)
 
+    # gender Muž/Žena/Iné
+    GENDER = [
+    ('M', 'Muž'),
+    ('F', 'Žena'),
+    ('O', 'Iné')   
+    ]
+
+    genders = models.CharField(
+        max_length=4,
+        choices=GENDER,
+        null = True,
+        blank = True,
+        default = "O"
+    )
+
     def __str__(self):
         return "User_profile ID: %s | Email: %s" % (self.pk,self.user.email) 
 
