@@ -1,5 +1,5 @@
 ## Social Network - projektový manažment 
-
+#UPDATE 08/11/2022 - Branch main changes 
 # Autori:
 [ks588hn](https://github.com/ks588hn)  
 [ALESO8](https://github.com/ALESO8)  
