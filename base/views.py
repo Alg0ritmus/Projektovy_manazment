@@ -296,15 +296,8 @@ def login_user(request):
 
 @firebase_token_verification
 @api_view(['GET'])
-def verify_token_test(request):
-    if request.method == 'POST':
-        raw_data = request.body.decode()
-        
-        json_data = json.loads(raw_data)
-    
-        passed_data = json_data["passed_data"]
+def verify_token_test_get(request):
 
-        return Response({"Success":"This route is verified!","Your Data":passed_data})
     return Response({"Success":"This route is verified!"})
 
 

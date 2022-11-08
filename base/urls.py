@@ -31,6 +31,7 @@ urlpatterns = [
 
     # testing url
     path('vtt/',views.verify_token_test,name="verify_token_test"),
+    path('vtt_get/',views.verify_token_test_get,name="verify_token_test_get"),
 
     #path('firebase-login/',views.fb_login_view,name="fb_login_view"),
     #path('firebase-logout/',views.fb_logout_view,name="fb_logout_view"),
