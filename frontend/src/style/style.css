@@ -1,0 +1,218 @@
+/* -----VSEOBECNE----- */
+:root{
+    --main-bg-color:#ECF3FF;
+    --main-logo-color:#166fe5;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+} 
+
+.formsErrorMessage{
+    font-size: 20px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+/* -----PRIHLASENIE----- */
+
+.homeContainer{
+    position: absolute;
+    background-color: var(--main-bg-color);
+    height: 100vh;
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 70px;
+}
+
+.homeVrap{
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    margin: 20px 30px 10px 30px;
+}
+
+.homeLeft_box p{
+    font-size: 1.25rem;
+    margin-bottom: 5px;
+}
+.homeLeft_box{
+    width: 40%;
+}
+
+.homeLogo{
+    font-size: 3.25rem;
+    margin-bottom: 25px;
+    color: var(--main-logo-color);
+}
+
+.homeLeft_box p{
+    font-size: 1.25rem;
+    margin-bottom: 5px;
+}
+.homeLeft_box{
+    width: 40%;
+}
+
+
+.btn:last-of-type{
+    background-color: #42b72a;
+    font-size: 17px;
+}
+
+.loginForm{
+    background-color: white;
+    border-radius: 8px;
+    width: 420px;
+    min-width: 300px;
+    padding: 20px;
+    height: max-content;
+}
+
+.loginFormBody > *{
+    padding-bottom: 20px;
+}
+.loginFormBody:last-child{
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.btn{
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    width: 100%;
+    background-color: #1877f2;
+
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    padding: 10px;
+}
+.loginFormBody{
+    text-align: left;
+    position: relative;
+    padding: 20px 0 15px 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.form__input{
+    border-radius: 6px;
+    font-size: 17px;
+    padding: 14px 16px;
+    border: 1px solid #dddfe2;
+    width: 100%;
+}
+.domov_footer{
+    margin-bottom: 20px;
+}
+
+/* -----PRIHLASENIE-RESPONZIVNE----- */
+
+@media only screen and (max-width: 850px) {
+    .homeVrap{
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .homeLeft_box{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .loginForm{
+        width: 340px;
+    }
+}
+
+@media only screen and (max-height: 600px) {
+    .homeContainer{
+        height: fit-content;
+    }
+    .homeContainer{
+        gap: 20px;
+    }
+}
+
+/* -----REGISTRACIA----- */
+
+.registrationContainer{
+    position: absolute;
+    background-color: var(--main-bg-color);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 70px;
+}
+
+.registrationFormBody{
+    margin: 35px;
+    background-color: white;
+    height: max-content;
+    width: 420px;
+    padding: 30px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.registrationFormBody input{
+    margin-bottom: 20px;
+}
+
+.registrationBtn{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.registrationContainer .footer{
+    margin-bottom: 30px;
+}
+
+/* -----REGISTRACIA-RESPONZIVNA----- */
+
+@media only screen and (max-width: 850px) {
+    .registrationContainer{
+        gap: 25px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .registrationFormBody{
+        width: 340px;
+    }
+}
+
+@media only screen and (max-height: 670px) {
+    .registrationContainer{
+        height: fit-content;
+    }
+}
+
+/* -----MAIN----- */
+
+.emptyLink{
+    text-decoration: none;
+}
+
+.navLink{
+    text-decoration: none;
+    color: white;
+    margin-right: 20px;
+}
